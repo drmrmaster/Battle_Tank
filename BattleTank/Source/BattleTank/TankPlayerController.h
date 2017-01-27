@@ -13,7 +13,8 @@ UCLASS()
 class BATTLETANK_API ATankPlayerController : public APlayerController
 {
 	GENERATED_BODY()
-	
+
+
 private:
 	void Tick(float DeltaSeconds) override;
 	void BeginPlay() override;
@@ -27,4 +28,11 @@ private:
 
 	//return an OUT parameter, true if hit landscape
 	bool GetSightRayHitLocation(FVector& Hitlocation) const;
+
+	UPROPERTY(EditAnywhere) 
+	float CrossHairXLocation = 0.5f;
+
+	UPROPERTY(EditAnywhere) 
+	float CrossHairYLocation = 0.33333f;
+
 };
