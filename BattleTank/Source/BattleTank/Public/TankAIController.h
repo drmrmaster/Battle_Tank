@@ -18,4 +18,7 @@ private:
 
 	void Tick(float DeltaSeconds) override;
 
+	// how close the AI Tank can get
+	float AcceptanceRadius = 3000;
+
 };
